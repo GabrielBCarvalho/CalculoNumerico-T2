@@ -21,7 +21,7 @@ double simpsonComposta(double x, int N){
 		sum1 += calculaFx((2*j-1)*h);
 		sum2 += calculaFx(2*j*h);
 	}
-	sum1 += calculaFx(2*(N/2-1)*h);
+	sum1 += calculaFx((2*(N/2)-1)*h);
 
 	integral = (h/3)*(fx0 + fxN + 4*sum1 + 2*sum2);
 
@@ -31,7 +31,6 @@ double simpsonComposta(double x, int N){
 // Usa o método de Newton para determinar a raiz da equação descrita
 double metodoDeNewton(int N){
 	double xn1 = 0.5, xn, eps = pow(10, -10);
-	int  i =0;
 	
 	do{
 		xn = xn1;
