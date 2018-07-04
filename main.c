@@ -36,10 +36,9 @@ double metodoDeNewton(int N){
 	do{
 		xn = xn1;
 		xn1 = xn - ((simpsonComposta(xn, N) - 0.45) / calculaFx(xn));
-		i++;
 	}
 	while (fabs(xn1 - xn) >= eps);
-	printf("Iterações = %d\n", i);
+
 	return xn1;
 }
 
